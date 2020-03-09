@@ -4,25 +4,24 @@ using UnityEngine;
 
 public class FoodCollision : MonoBehaviour
 {
-    private int FoodCount;
 
     void Start()
     {
-        
+        GameObject player = GameObject.FindGameObjectWithTag("Player");
+        player.GetComponent<ScoreKeeper>();
     }
 
-    // Update is called once per frame
+    private void OnCollisionEnter(Collision collision)
+    {
+        GameObject other = collision.gameObject;
+        if (other.CompareTag("Player"))
+        {
+            Debug.Log("Collision");
+
+        }
+    }
     void Update()
     {
         
-    }
-    private void OnCollisionEnter(Collision collision)
-    {
-        if(collision.other.gameObject.name == "Food")
-        {
-            Debug.Log("Have picked up food!");
-            FoodCount++;
-
-        }
     }
 }

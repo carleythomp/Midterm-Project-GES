@@ -5,28 +5,21 @@ using UnityEngine;
 public class SpawnAnimals : MonoBehaviour
 {
     [SerializeField] GameObject[] animalPrefab;
-    private float spawnRange = 9;
-    [SerializeField] int animalIndex;
+    [SerializeField] bool stopSpawning = false;
+    [SerializeField] float spawnTime;
+    [SerializeField] float spawnDelay;
+
     void Start()
     {
-        
-        Instantiate(animalPrefab[animalIndex], GenerateSpawnPosition(), animalPrefab[animalIndex].transform.rotation);
-
-        
-        
+        InvokeRepeating("MakingAnimals", 2.0f, 0.3f);
     }
-    private Vector3 GenerateSpawnPosition()
+
+    void MakingAnimals()
     {
-        float spawnPosX = Random.Range(-spawnRange, spawnRange);
-        float spawnPosZ = Random.Range(-spawnRange, spawnRange);
-
-        Vector3 randomPos = new Vector3(spawnPosX, 0, spawnPosZ);
-        return randomPos;
+        Quaternion randomRotation = Random.rotationUniform;
+        Vector3 spawnPosition = transform.position + transform.forward * 0.5f;
+        int animalIndex = Random.Range(0, animalPrefab.Length);
+        Instantiate(animalPrefab[animalIndex], spawnPosition, randomRotation);
     }
 
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
 }
