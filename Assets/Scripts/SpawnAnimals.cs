@@ -5,12 +5,10 @@ using UnityEngine;
 public class SpawnAnimals : MonoBehaviour
 {
     [SerializeField] GameObject[] animalPrefab;
-    [SerializeField] bool stopSpawning = false;
     private float spawnIntervals = 8.0f;
     private float spawnDelay = 10.0f;
     private float spawnRangeX = 5;
     private float spawnPosZ = 8;
-    private float xRange = 10;
     private int count = 0;
     void Start()
     {

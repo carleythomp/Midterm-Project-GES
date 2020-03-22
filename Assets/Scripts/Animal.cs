@@ -6,25 +6,25 @@ public class Animal : MonoBehaviour
 {
     [SerializeField] float speed = 2;
     private Rigidbody animalRB;
-    [SerializeField] Transform player;
-    private Vector3 move;
+    [SerializeField] GameObject player;
+   
 
     void Start()
     {
         animalRB = GetComponent<Rigidbody>();
-        player = GetComponent<Transform>();
-        
+       
     }
 
     void Update()
     {
         
-        Vector3 direction = player.position - transform.position;
-        animalRB.AddForce((player.transform.position - transform.position).normalized * speed);
+       // Vector3 direction = player.position - transform.position;
+        //animalRB.AddForce(direction.normalized * speed);
+
         //Debug.Log(direction);
+        //has direction, but nowhere to currently go because there is nothing moving it. 
         
+        //direction.Normalize();
         
-        direction.Normalize();
-        move = direction;
     }
 }

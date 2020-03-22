@@ -13,13 +13,21 @@ public class ScoreKeeper : MonoBehaviour
         UpdateText();
     }
 
-    void Update()
+    
+    void AddText()
     {
-        
+        score++;
+        UpdateText();
+
+    }
+    void MinusText()
+    {
+        score--;
+        UpdateText();
+
     }
     void UpdateText()
     {
         scoreText.text = $"Food Collected: {score}";
-
     }
 }

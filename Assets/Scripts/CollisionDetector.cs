@@ -19,7 +19,7 @@ public class CollisionDetector : MonoBehaviour
         if(other.CompareTag("Player"))
         {
             Debug.Log("Collision");
-
+           
         }
     }
 
