@@ -14,7 +14,7 @@ public class FoodCollision : MonoBehaviour
     private void OnCollisionEnter(Collision collision)
     {
         GameObject other = collision.gameObject;
-        if (other.CompareTag("Player"))
+        if (other.CompareTag("Food"))
         {
             Debug.Log("Collision");
             GameObject.Destroy(gameObject, 1);

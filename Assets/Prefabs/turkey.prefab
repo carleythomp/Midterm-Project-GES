@@ -200,9 +200,10 @@ GameObject:
   - component: {fileID: 4122836557443846661}
   - component: {fileID: 7641424849254264572}
   - component: {fileID: 2440885171301127223}
+  - component: {fileID: 3292467531235586448}
   m_Layer: 0
   m_Name: turkey
-  m_TagString: Untagged
+  m_TagString: Food
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -277,9 +278,22 @@ MeshCollider:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8230079170654673440}
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 3
-  m_Convex: 0
+  m_Convex: 1
   m_CookingOptions: 14
   m_Mesh: {fileID: -6365220518586323186, guid: e762c077862c06940ae6b545fd416076, type: 3}
+--- !u!65 &3292467531235586448
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8230079170654673440}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.93046284, y: 0.35806647, z: 0.6512867}
+  m_Center: {x: 0.009257545, y: 0.20358267, z: 0}

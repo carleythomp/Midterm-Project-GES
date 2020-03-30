@@ -12,9 +12,10 @@ GameObject:
   - component: {fileID: 8214352065600036890}
   - component: {fileID: 2505044579957202147}
   - component: {fileID: 7572727519147025960}
+  - component: {fileID: 7105917371079756189}
   m_Layer: 0
   m_Name: riceBall
-  m_TagString: Untagged
+  m_TagString: Food
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -88,9 +89,22 @@ MeshCollider:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4251225190220949567}
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 3
-  m_Convex: 0
+  m_Convex: 1
   m_CookingOptions: 14
   m_Mesh: {fileID: -8741627671266169479, guid: 33e91e1eb05a09041875e590d8a6893a, type: 3}
+--- !u!65 &7105917371079756189
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4251225190220949567}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.080000006, y: 0.1415, z: 0.12944272}
+  m_Center: {x: 0, y: 0.07075, z: 0}

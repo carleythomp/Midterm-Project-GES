@@ -12,9 +12,10 @@ GameObject:
   - component: {fileID: 2058457294730193548}
   - component: {fileID: 5741409389202347637}
   - component: {fileID: 322458310566948030}
+  - component: {fileID: 7129579888070203977}
   m_Layer: 0
   m_Name: wineWhite
-  m_TagString: Untagged
+  m_TagString: Food
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -92,6 +93,19 @@ MeshCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Convex: 0
+  m_Convex: 1
   m_CookingOptions: 14
   m_Mesh: {fileID: 4285055768096029958, guid: 12479a7754f190d4eba96766ebec0114, type: 3}
+--- !u!65 &7129579888070203977
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6309898663203021481}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.2028, y: 0.6556, z: 0.17562994}
+  m_Center: {x: 0, y: 0.3062, z: 0}
