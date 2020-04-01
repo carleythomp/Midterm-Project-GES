@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 5888311743379698997}
   - component: {fileID: 183509858390346188}
   - component: {fileID: 5287219871789822727}
+  - component: {fileID: 7095011245897723359}
   m_Layer: 0
   m_Name: salad
   m_TagString: Food
@@ -96,3 +97,15 @@ MeshCollider:
   m_Convex: 1
   m_CookingOptions: 14
   m_Mesh: {fileID: 7113742550581899826, guid: aa36de19930df3f43877d2f1d279f184, type: 3}
+--- !u!114 &7095011245897723359
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1925046066729827600}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f9926e1739f0abd4481ae8ac71176161, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 

@@ -13,14 +13,15 @@ public class CollisionDetector : MonoBehaviour
         
     }
 
-    private void OnCollisionEnter(Collision collision)
+    private void OnTriggerEnter(Collider collider)
     {
-        GameObject other = collision.gameObject;
-        if(other.CompareTag("Player"))
+        if (collider.gameObject.tag == "Player")
         {
-            Debug.Log("Collision");
-           
+            Debug.Log("Collision with Animal");
+            Destroy(gameObject, 2);
+
         }
+
     }
 
     void Update()

@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 8530079490842731329}
   - component: {fileID: 4446426473700399498}
   - component: {fileID: 8328160622305685814}
+  - component: {fileID: -7776067433482831350}
   - component: {fileID: 2141692872695920270}
   m_Layer: 0
   m_Name: bowlSoup
@@ -112,6 +113,18 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 0.5399493, y: 0.22991906, z: 0.6234799}
   m_Center: {x: 0, y: 0.11495953, z: 0}
+--- !u!114 &-7776067433482831350
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7952292713197770653}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f9926e1739f0abd4481ae8ac71176161, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!54 &2141692872695920270
 Rigidbody:
   m_ObjectHideFlags: 0

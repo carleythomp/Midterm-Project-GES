@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 2505044579957202147}
   - component: {fileID: 7572727519147025960}
   - component: {fileID: 7105917371079756189}
+  - component: {fileID: -8183906789353397018}
   m_Layer: 0
   m_Name: riceBall
   m_TagString: Food
@@ -108,3 +109,15 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 0.080000006, y: 0.1415, z: 0.12944272}
   m_Center: {x: 0, y: 0.07075, z: 0}
+--- !u!114 &-8183906789353397018
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4251225190220949567}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f9926e1739f0abd4481ae8ac71176161, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 

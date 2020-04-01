@@ -517,7 +517,7 @@ GameObject:
   - component: {fileID: 184732194}
   m_Layer: 0
   m_Name: FoodSpawn
-  m_TagString: Untagged
+  m_TagString: Food
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -564,7 +564,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 184732191}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: f9926e1739f0abd4481ae8ac71176161, type: 3}
   m_Name: 
