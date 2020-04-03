@@ -7,13 +7,17 @@ public class MenuScript : MonoBehaviour
 {
     [SerializeField] GameObject mainMenu;
     [SerializeField] GameObject creditMenu;
-    
+    [SerializeField] GameObject instructionsMenu;
     public void StartGame()
     {
         //SceneManager.LoadScene("Level1");
-        mainMenu.SetActive(false);
+        instructionsMenu.SetActive(false);
     }
-
+    public void ShowInstruct()
+    {
+        mainMenu.SetActive(false);
+        instructionsMenu.SetActive(true);
+    }
     public void ShowCredits()
     {
         mainMenu.SetActive(false);
