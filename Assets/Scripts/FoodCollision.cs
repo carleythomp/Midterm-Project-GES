@@ -8,7 +8,7 @@ public class FoodCollision : MonoBehaviour
     void Start()
     {
         GameObject player = GameObject.FindGameObjectWithTag("Player");
-        player.GetComponent<ScoreKeeper>();
+        scoreKeeper = player.GetComponent<ScoreKeeper>();
     }
 
     private void OnTriggerEnter(Collider collider)
@@ -17,7 +17,7 @@ public class FoodCollision : MonoBehaviour
         {
             Debug.Log("Collision with food");
             Destroy(gameObject);
-             
+            scoreKeeper.AddText();
         }
        
 

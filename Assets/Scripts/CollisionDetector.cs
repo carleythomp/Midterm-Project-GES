@@ -4,12 +4,12 @@ using UnityEngine;
 
 public class CollisionDetector : MonoBehaviour
 {
-    ScoreKeeper scoreKeeer;
+    ScoreKeeper scoreKeeper;
 
     void Start()
     {
        GameObject player = GameObject.FindGameObjectWithTag("Player");
-        player.GetComponent<ScoreKeeper>();
+       scoreKeeper = player.GetComponent<ScoreKeeper>();
         
     }
 
@@ -19,7 +19,7 @@ public class CollisionDetector : MonoBehaviour
         {
             Debug.Log("Collision with Animal");
             Destroy(gameObject, 2);
-
+            scoreKeeper.MinusText();
         }
 
     }

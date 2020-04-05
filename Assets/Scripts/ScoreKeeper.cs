@@ -14,19 +14,25 @@ public class ScoreKeeper : MonoBehaviour
     }
 
     
-    void AddText()
+   public void AddText()
     {
         score++;
         UpdateText();
-
+        if(score == 5)
+        {
+            //print YOU WON
+        }
     }
-    void MinusText()
+   public void MinusText()
     {
         score--;
         UpdateText();
-
+        if(score < 0)
+        {
+            //print GAMEOVER
+        }
     }
-    void UpdateText()
+   public void UpdateText()
     {
         scoreText.text = $"Food Collected: {score}";
     }
