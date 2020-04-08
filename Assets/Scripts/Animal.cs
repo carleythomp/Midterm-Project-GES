@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class Animal : MonoBehaviour
 {
-    [SerializeField] float speed = 2;
+    private float speed = 6;
     private Rigidbody animalRB;
     [SerializeField] GameObject player;
    
@@ -17,6 +17,8 @@ public class Animal : MonoBehaviour
 
     void Update()
     {
+        transform.Translate(Vector3.forward * Time.deltaTime * speed);
+
 
         //Vector3 direction = player.position - transform.position;
         //animalRB.AddForce(direction.normalized * speed);
