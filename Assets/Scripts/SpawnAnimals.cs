@@ -6,7 +6,7 @@ public class SpawnAnimals : MonoBehaviour
 {
     [SerializeField] GameObject[] animalPrefab;
     private float spawnIntervals = 5.0f;
-    private float spawnDelay = 2.0f;
+    private float spawnDelay = 4.0f;
     private float spawnRangeX = 5;
     private float spawnPosZ = 8;
     private int count = 0;
