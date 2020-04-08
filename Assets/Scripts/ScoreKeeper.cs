@@ -7,6 +7,8 @@ public class ScoreKeeper : MonoBehaviour
 {
     private int score;
     [SerializeField] Text scoreText;
+    [SerializeField] Text Win;
+    [SerializeField] Text Lose;
     void Start()
     {
         score = 0;
@@ -20,7 +22,7 @@ public class ScoreKeeper : MonoBehaviour
         UpdateText();
         if(score == 5)
         {
-            //print YOU WON
+            Win.text = "YOU WON!";
         }
     }
    public void MinusText()
@@ -29,7 +31,8 @@ public class ScoreKeeper : MonoBehaviour
         UpdateText();
         if(score < 0)
         {
-            //print GAMEOVER
+            
+            Lose.text = "YOU LOSE :(";
         }
     }
    public void UpdateText()

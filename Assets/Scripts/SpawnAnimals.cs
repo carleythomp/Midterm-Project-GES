@@ -28,7 +28,7 @@ public class SpawnAnimals : MonoBehaviour
     }
 
 
-    void MakingAnimals()
+    public void MakingAnimals()
     {
         if(count < 5 )
         {
