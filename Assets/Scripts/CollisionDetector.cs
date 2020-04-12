@@ -7,6 +7,7 @@ public class CollisionDetector : MonoBehaviour
     ScoreKeeper scoreKeeper;
     [SerializeField] AudioClip hitSound;
     private AudioSource source;
+    private bool hasCollided = false;
     void Start()
     {
        GameObject player = GameObject.FindGameObjectWithTag("Player");
@@ -18,17 +19,28 @@ public class CollisionDetector : MonoBehaviour
     {
         if (collider.gameObject.tag == "Player")
         {
-            Debug.Log("Collision with Animal");
-            Destroy(gameObject, 2);
-            scoreKeeper.MinusText();
-            source.PlayOneShot(hitSound);
+            hasCollided = true;
+         
+
+            
         }
 
     }
 
     void Update()
     {
+        if (hasCollided == true)
+        {
 
-        
+            source.PlayOneShot(hitSound);
+           // source.Stop();
+
+            Destroy(gameObject, 1);
+
+            scoreKeeper.MinusText();
+
+            hasCollided = false;
+        }
+
     }
 }

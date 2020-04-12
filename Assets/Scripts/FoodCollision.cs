@@ -20,7 +20,7 @@ public class FoodCollision : MonoBehaviour
         {
             Debug.Log("Collision with food");
             source.PlayOneShot(foodCollect);
-            Destroy(gameObject);
+            Destroy(gameObject, 1);
             scoreKeeper.AddText();
             
         }
@@ -28,15 +28,7 @@ public class FoodCollision : MonoBehaviour
 
     }
 
-    //private void OnCollisionEnter(Collision collision)
-    //{
-    //    GameObject other = collision.gameObject;
-    //    if (other.CompareTag("Food"))
-    //    {
-    //        Debug.Log("Collision");
-    //        GameObject.Destroy(gameObject, 1);
-    //    }
-    //}
+  
     void Update()
     {
         
