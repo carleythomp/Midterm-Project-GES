@@ -9,10 +9,18 @@ public class ScoreKeeper : MonoBehaviour
     [SerializeField] Text scoreText;
     [SerializeField] Text Win;
     [SerializeField] Text Lose;
+    PlayerMove playerMoving;
+    CollisionDetector animalCollision;
+   
     void Start()
     {
         score = 0;
         UpdateText();
+        GameObject player = GameObject.FindGameObjectWithTag("Player");
+        GameObject animal = GameObject.FindGameObjectWithTag("Animals");
+        animalCollision = animal.GetComponent<CollisionDetector>();
+        playerMoving = player.GetComponent<PlayerMove>();
+       
     }
 
     
@@ -23,16 +31,20 @@ public class ScoreKeeper : MonoBehaviour
         if(score == 5)
         {
             Win.text = "YOU WON!";
+            playerMoving.enabled = false;
+            animalCollision.enabled = false;
+            
         }
     }
    public void MinusText()
     {
         score--;
         UpdateText();
-        if(score < 0)
+        if (score < 0)
         {
-            
+            playerMoving.enabled = false;
             Lose.text = "YOU LOSE :(";
+            animalCollision.enabled = false;
         }
     }
    public void UpdateText()

@@ -10,6 +10,7 @@ public class SpawnAnimals : MonoBehaviour
     private float spawnRangeX = 5;
     private float spawnPosZ = 8;
     private int count = 0;
+    
     void Start()
     {
        // InvokeRepeating("MakingAnimals", spawnDelay, spawnIntervals);

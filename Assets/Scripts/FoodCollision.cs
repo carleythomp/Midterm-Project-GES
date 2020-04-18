@@ -18,6 +18,7 @@ public class FoodCollision : MonoBehaviour
     {
         if(collider.gameObject.tag == "Player")
         {
+            source.Stop();
             Debug.Log("Collision with food");
             source.PlayOneShot(foodCollect);
             Destroy(gameObject, 1);
