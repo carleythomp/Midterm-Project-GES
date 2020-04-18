@@ -10,18 +10,21 @@ public class MenuScript : MonoBehaviour
     [SerializeField] GameObject creditMenu;
     [SerializeField] GameObject instructionsMenu;
     SpawnAnimals SpawninAnim;
-
+  
+    
     private void Start()
     {
         GameObject SpawnManager = GameObject.FindGameObjectWithTag("SpawnAnimals");
         SpawninAnim = SpawnManager.GetComponent<SpawnAnimals>();
         SpawninAnim.enabled = false;
+       
     }
     public void StartGame()
     {
-        //SceneManager.LoadScene("Level1");
+       
         instructionsMenu.SetActive(false);
         SpawninAnim.enabled = true;
+        
     }
     public void ShowInstruct()
     {

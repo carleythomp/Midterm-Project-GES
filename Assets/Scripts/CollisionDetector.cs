@@ -21,11 +21,19 @@ public class CollisionDetector : MonoBehaviour
     void Update()
     {
        
-
+       
     }
     private void OnTriggerEnter(Collider collider)
     {
-        if (collider.gameObject.tag == "Player")
+        if (scoreKeeper.score >= 5)
+        {
+            Destroy(gameObject);
+        }
+        else if (scoreKeeper.score < 0)
+        {
+            Destroy(gameObject);
+        }
+        else if (collider.gameObject.tag == "Player")
         {
             source.PlayOneShot(hitSound);
             // source.Stop();
@@ -34,6 +42,8 @@ public class CollisionDetector : MonoBehaviour
 
             scoreKeeper.MinusText();
         }
+        
+        
 
     }
 }

@@ -5,7 +5,7 @@ using UnityEngine.UI;
 
 public class ScoreKeeper : MonoBehaviour
 {
-    private int score;
+    public int score;
     [SerializeField] Text scoreText;
     [SerializeField] Text Win;
     [SerializeField] Text Lose;
@@ -17,16 +17,19 @@ public class ScoreKeeper : MonoBehaviour
         score = 0;
         UpdateText();
         GameObject player = GameObject.FindGameObjectWithTag("Player");
+        playerMoving = player.GetComponent<PlayerMove>();
+
         GameObject animal = GameObject.FindGameObjectWithTag("Animals");
         animalCollision = animal.GetComponent<CollisionDetector>();
-        playerMoving = player.GetComponent<PlayerMove>();
-       
+
+
     }
 
     
    public void AddText()
     {
         score++;
+
         UpdateText();
         if(score == 5)
         {
@@ -35,10 +38,15 @@ public class ScoreKeeper : MonoBehaviour
             animalCollision.enabled = false;
             
         }
+        if(Win.text == "YOU WON!")
+        {
+            animalCollision.StopAllCoroutines();
+        }
     }
    public void MinusText()
     {
         score--;
+
         UpdateText();
         if (score < 0)
         {
@@ -46,6 +54,7 @@ public class ScoreKeeper : MonoBehaviour
             Lose.text = "YOU LOSE :(";
             animalCollision.enabled = false;
         }
+        
     }
    public void UpdateText()
     {
