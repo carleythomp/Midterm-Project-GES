@@ -10,37 +10,26 @@ public class ScoreKeeper : MonoBehaviour
     [SerializeField] Text Win;
     [SerializeField] Text Lose;
     PlayerMove playerMoving;
-    CollisionDetector animalCollision;
-   
+    Animal animalCollision;
     void Start()
     {
         score = 0;
         UpdateText();
         GameObject player = GameObject.FindGameObjectWithTag("Player");
         playerMoving = player.GetComponent<PlayerMove>();
-
         GameObject animal = GameObject.FindGameObjectWithTag("Animals");
-        animalCollision = animal.GetComponent<CollisionDetector>();
-
-
+        animalCollision = animal.GetComponent<Animal>();
     }
 
-    
    public void AddText()
     {
         score++;
 
         UpdateText();
-        if(score == 5)
+        if(score == 8)
         {
             Win.text = "YOU WON!";
             playerMoving.enabled = false;
-            animalCollision.enabled = false;
-            
-        }
-        if(Win.text == "YOU WON!")
-        {
-            animalCollision.StopAllCoroutines();
         }
     }
    public void MinusText()
@@ -54,10 +43,16 @@ public class ScoreKeeper : MonoBehaviour
             Lose.text = "YOU LOSE :(";
             animalCollision.enabled = false;
         }
-        
     }
    public void UpdateText()
     {
         scoreText.text = $"Food Collected: {score}";
+    }
+    public void AnimalFast()
+    {
+        if(score > 0)
+        {
+            animalCollision.speed = animalCollision.speed + 2;
+        }
     }
 }

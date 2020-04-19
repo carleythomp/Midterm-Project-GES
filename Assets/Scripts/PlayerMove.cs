@@ -11,8 +11,6 @@ public class PlayerMove : MonoBehaviour
     {
         cc = GetComponent<CharacterController>();
     }
-
-
     void Update()
     {
         transform.Rotate(0, Input.GetAxis("Horizontal") * rotateSpeed, 0);

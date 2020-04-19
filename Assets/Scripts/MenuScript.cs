@@ -10,21 +10,18 @@ public class MenuScript : MonoBehaviour
     [SerializeField] GameObject creditMenu;
     [SerializeField] GameObject instructionsMenu;
     SpawnAnimals SpawninAnim;
-  
-    
+
     private void Start()
     {
         GameObject SpawnManager = GameObject.FindGameObjectWithTag("SpawnAnimals");
         SpawninAnim = SpawnManager.GetComponent<SpawnAnimals>();
         SpawninAnim.enabled = false;
-       
     }
     public void StartGame()
     {
-       
-        instructionsMenu.SetActive(false);
         SpawninAnim.enabled = true;
-        
+        instructionsMenu.SetActive(false);
+       
     }
     public void ShowInstruct()
     {
@@ -44,6 +41,10 @@ public class MenuScript : MonoBehaviour
         mainMenu.SetActive(true);
         creditMenu.SetActive(false);
         SpawninAnim.enabled = false;
+    }
+    public void Restart()
+    {
+        SceneManager.LoadScene("Level1");
     }
     public void QuitGame()
     {

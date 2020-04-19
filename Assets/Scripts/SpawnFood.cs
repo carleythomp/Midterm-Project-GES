@@ -16,8 +16,6 @@ public class SpawnFood : MonoBehaviour
     void Update()
     {
         PlacingFood();
-
-
     }
 
     void PlacingFood()
@@ -27,10 +25,6 @@ public class SpawnFood : MonoBehaviour
             GameObject foodPrefab = foodPrefabs[Random.Range(0, foodPrefabs.Length)];
             Vector3 spawnPos = new Vector3(Random.Range(-spawnRangeX / 2, spawnRangeX / 2), 0, spawnPosZ);
             Instantiate<GameObject>(foodPrefab, spawnPos, transform.rotation);
-
-            //hmm OH make random z position??
-
-
             count++;
         }
     }
